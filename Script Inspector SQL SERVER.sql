@@ -1,7 +1,7 @@
 ---------------------------------------------------------
 -- Insert into UI_USER_TYPES the Inspector Profile
 ---------------------------------------------------------
-INSERT INTO [TMS_LORIENTE].[dbo].[UI_USER_TYPES] (TITLE)
+INSERT INTO [TMS_NAME].[dbo].[UI_USER_TYPES] (TITLE)
 VALUES ('Inspector');
 
 -- Get the USER_TYPE_ID of Inspector
@@ -14,13 +14,13 @@ DECLARE @name NVARCHAR(255);
 
 SELECT TOP 1 
     @name = SUBSTRING(USER_NAME, CHARINDEX('@', USER_NAME) + 1, LEN(USER_NAME))
-FROM [TMS_LORIENTE].[dbo].UI_USERS
+FROM [TMS_NAME].[dbo].UI_USERS
 WHERE USER_NAME LIKE 'quatuor@%';
 
 ---------------------------------------------------------
 -- Insert into UI_USERS
 ---------------------------------------------------------
-INSERT INTO [TMS_LORIENTE].[dbo].[UI_USERS] (
+INSERT INTO [TMS_NAME].[dbo].[UI_USERS] (
     USER_NAME, 
     PASSWORD, 
     ACTIVE, 
