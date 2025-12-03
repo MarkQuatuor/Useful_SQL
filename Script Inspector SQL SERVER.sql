@@ -14,7 +14,7 @@ DECLARE @name NVARCHAR(255);
 
 SELECT TOP 1 
     @name = SUBSTRING(USER_NAME, CHARINDEX('@', USER_NAME) + 1, LEN(USER_NAME))
-FROM [TMS_NAME].[dbo].UI_USERS
+FROM [TMS_NAME].[dbo].[UI_USERS]
 WHERE USER_NAME LIKE 'quatuor@%';
 
 ---------------------------------------------------------
