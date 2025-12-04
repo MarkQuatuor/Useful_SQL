@@ -35,7 +35,7 @@ VALUES (
         'I',
         UPPER(LEFT(@name, 1))
     ),
-    4,
+    @ui_user_types_new_id,
     'ES',
     0
 );
